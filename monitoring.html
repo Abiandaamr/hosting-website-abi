@@ -1,0 +1,48 @@
+<!-- File: index.html -->
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard Monitoring</title>
+    <link rel="stylesheet" href="monitoring.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Dashboard Monitoring</h1>
+        <p class="subtitle">Transduser Ultrasonik & Kamera</p>
+    </header>
+
+
+    <main class="dashboard">
+        <section class="panel sensors">
+            <h2>Status Transduser Ultrasonik</h2>
+            <div class="status-card">
+                <h3>Sensor Ultrasonik</h3>
+                <div class="status-indicator off" id="ultra-status">OFF</div>
+                <button class="btn" onclick="toggleStatus()">Toggle ON/OFF</button>
+            </div>
+        </section>
+
+
+        <aside class="panel camera">
+            <h2>Kamera</h2>
+            <div class="camera-small">
+                <video id="camera-stream" autoplay playsinline muted></video>
+                <div class="cam-meta">Status: <span id="cam-status">Terputus</span></div>
+            </div>
+        </aside>
+    </main>
+
+
+    <footer class="footer">
+        <small>Created by Anda — integrasikan backend untuk data nyata</small>
+    </footer>
+
+
+    <script src="monitoring.js"></script>
+</body>
+
+</html>
